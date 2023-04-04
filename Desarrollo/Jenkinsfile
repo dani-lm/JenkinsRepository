@@ -1,11 +1,15 @@
-pipeline {
+pipeline
+{
     agent any
-
-    stages {
-        stage('UAT') {
-            steps {
-                echo 'Hola'
+    stages
+    {
+        stage("Comando de CMD")
+        {
+            steps
+            {
+                bat 'java -version'
+                bat 'git --version'
             }
         }
-    }
+    }    
 }
